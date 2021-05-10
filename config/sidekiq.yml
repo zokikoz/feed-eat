@@ -1,0 +1,5 @@
+:dynamic: true
+:schedule:
+  FeedAggregator:
+    every: '10m'
+    class: RssWorker
