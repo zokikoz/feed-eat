@@ -13,6 +13,9 @@
 # sticking to rails and rspec-rails APIs to keep things simple and stable.
 
 RSpec.describe "/channels", type: :request do
+  before(:each) do
+    Channel.delete_all
+  end
   
   # Channel. As you add validations to Channel, be sure to
   # adjust the attributes here as well.

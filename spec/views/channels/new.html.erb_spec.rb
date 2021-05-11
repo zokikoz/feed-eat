@@ -2,8 +2,9 @@ require 'rails_helper'
 
 RSpec.describe "channels/new", type: :view do
   before(:each) do
+    Channel.delete_all
     assign(:channel, Channel.new(
-      link: "https://www.ruby-lang.org"
+      link: "https://www.ruby-lang.org/en/feeds/news.rss"
     ))
   end
 
