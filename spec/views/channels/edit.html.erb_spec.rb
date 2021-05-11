@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe "channels/edit", type: :view do
   before(:each) do
     @channel = assign(:channel, Channel.create!(
-      link: "MyString"
+      link: "https://www.ruby-lang.org"
     ))
   end
 
