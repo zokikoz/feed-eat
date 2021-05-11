@@ -35,25 +35,9 @@ RSpec.describe "/channels", type: :request do
     end
   end
 
-  describe "GET /show" do
-    it "renders a successful response" do
-      channel = Channel.create! valid_attributes
-      get channel_url(channel)
-      expect(response).to be_successful
-    end
-  end
-
   describe "GET /new" do
     it "renders a successful response" do
       get new_channel_url
-      expect(response).to be_successful
-    end
-  end
-
-  describe "GET /edit" do
-    it "render a successful response" do
-      channel = Channel.create! valid_attributes
-      get edit_channel_url(channel)
       expect(response).to be_successful
     end
   end
@@ -65,11 +49,6 @@ RSpec.describe "/channels", type: :request do
           post channels_url, params: { channel: valid_attributes }
         }.to change(Channel, :count).by(1)
       end
-
-      it "redirects to the created channel" do
-        post channels_url, params: { channel: valid_attributes }
-        expect(response).to redirect_to(channel_url(Channel.last))
-      end
     end
 
     context "with invalid parameters" do
@@ -78,41 +57,7 @@ RSpec.describe "/channels", type: :request do
           post channels_url, params: { channel: invalid_attributes }
         }.to change(Channel, :count).by(0)
       end
-
-#      it "renders a successful response (i.e. to display the 'new' template)" do
-#        post channels_url, params: { channel: invalid_attributes }
-#        expect(response).to be_successful
-#      end
     end
-  end
-
-  describe "PATCH /update" do
-    context "with valid parameters" do
-      let(:new_attributes) {
-        {link: 'https://www.ruby-lang.org/en/feeds/news.rss'}
-      }
-
-      it "updates the requested channel" do
-        channel = Channel.create! valid_attributes
-        patch channel_url(channel), params: { channel: new_attributes }
-        channel.reload
-      end
-
-      it "redirects to the channel" do
-        channel = Channel.create! valid_attributes
-        patch channel_url(channel), params: { channel: new_attributes }
-        channel.reload
-        expect(response).to redirect_to(channel_url(channel))
-      end
-    end
-
-#    context "with invalid parameters" do
-#      it "renders a successful response (i.e. to display the 'edit' template)" do
-#        channel = Channel.create! valid_attributes
-#        patch channel_url(channel), params: { channel: invalid_attributes }
-#        expect(response).to be_successful
-#      end
-#    end
   end
 
   describe "DELETE /destroy" do
