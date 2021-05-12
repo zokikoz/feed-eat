@@ -10,6 +10,9 @@ RSpec.describe RssWorker, type: :worker do
     stub_request(:get, "https://www.ruby-lang.org/en/feeds/news.rss")
       .to_return(status: 200, body: rss_response_file, headers: {})
 
+    # Stub for callback method
+    allow_any_instance_of(Channel).to receive(:rss_worker_start).and_return(true)
+
     Channel.delete_all
     Channel.create!(link: 'https://www.ruby-lang.org/en/feeds/news.rss')
   end
