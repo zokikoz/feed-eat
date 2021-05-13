@@ -16,8 +16,6 @@ RSpec.describe "/channels", type: :request do
   before(:each) do
     # Stub for the callback method triggering RSS worker
     allow_any_instance_of(Channel).to receive(:rss_worker_start).and_return(true)
-
-    Channel.delete_all
   end
 
   # Channel. As you add validations to Channel, be sure to
