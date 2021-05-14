@@ -2,9 +2,6 @@ require 'rails_helper'
 
 RSpec.describe "channels/index", type: :view do
   before(:each) do
-    # Stub for the callback method triggering RSS worker
-    allow_any_instance_of(Channel).to receive(:rss_worker_start).and_return(true)
-
     assign(:channels, [Channel.create!(link: "https://www.ruby-lang.org/en/feeds/news.rss"),
                        Channel.create!(link: "https://www.ruby-lang.org/en/feeds/news.rss")])
   end

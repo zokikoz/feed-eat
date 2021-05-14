@@ -7,6 +7,10 @@ RSpec.describe Channel, type: :model do
     it { should have_many(:items) }
   end
 
+  describe "Uniqueness" do
+    it { should validate_uniqueness_of(:link) }
+  end
+
   it "is not valid without a link" do
     expect(subject).to_not be_valid
   end
@@ -19,7 +23,7 @@ RSpec.describe Channel, type: :model do
     end
   end
 
-  good_urls = %w[https://weblog.rubyonrails.org/feed/atom.xml https://www.ruby-lang.org/en/feeds/news.rss http://xn--80adxhks.xn--p1ai]
+  good_urls = %w[https://weblog.rubyonrails.org/feed/atom.xml https://www.ruby-lang.org/en/feeds/news.rss]
   good_urls.each do |url|
     it "is valid with good URL" do
       subject.link = url

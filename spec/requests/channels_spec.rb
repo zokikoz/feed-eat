@@ -13,11 +13,6 @@ require 'rails_helper'
 # sticking to rails and rspec-rails APIs to keep things simple and stable.
 
 RSpec.describe "/channels", type: :request do
-  before(:each) do
-    # Stub for the callback method triggering RSS worker
-    allow_any_instance_of(Channel).to receive(:rss_worker_start).and_return(true)
-  end
-
   # Channel. As you add validations to Channel, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
