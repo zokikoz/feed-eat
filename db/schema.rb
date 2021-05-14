@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_10_161551) do
+ActiveRecord::Schema.define(version: 2021_05_13_143931) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2021_05_10_161551) do
     t.string "link"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["link"], name: "index_channels_on_link", unique: true
   end
 
   create_table "items", force: :cascade do |t|
@@ -30,6 +31,9 @@ ActiveRecord::Schema.define(version: 2021_05_10_161551) do
     t.datetime "pub_date"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["channel_id"], name: "index_items_on_channel_id"
+    t.index ["guid"], name: "index_items_on_guid", unique: true
+    t.index ["pub_date"], name: "index_items_on_pub_date"
   end
 
 end
