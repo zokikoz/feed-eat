@@ -19,6 +19,10 @@ RSpec.configure do |config|
     rss_response_file = File.new("#{::Rails.root}/tmp/rss_response.txt")
     stub_request(:get, "https://www.ruby-lang.org/en/feeds/news.rss")
       .to_return(status: 200, body: rss_response_file, headers: {})
+    # ATOM valid response stub
+    atom_response_file = File.new("#{::Rails.root}/tmp/atom_response.txt")
+    stub_request(:get, "https://weblog.rubyonrails.org/feed/atom.xml")
+      .to_return(status: 200, body: atom_response_file, headers: {})
 
     # Stub for callback method
     allow_any_instance_of(Channel).to receive(:rss_worker_start).and_return(true)

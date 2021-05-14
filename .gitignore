@@ -13,6 +13,7 @@
 !/log/.keep
 !/tmp/.keep
 !/tmp/rss_response.txt
+!/tmp/atom_response.txt
 
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*

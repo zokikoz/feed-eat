@@ -1,0 +1,485 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="https://weblog.rubyonrails.org/feed/atom.xml" rel="self" type="application/atom+xml" /><link href="https://weblog.rubyonrails.org/" rel="alternate" type="text/html" /><updated>2021-05-05T17:24:35+00:00</updated><id>https://weblog.rubyonrails.org/feed/atom.xml</id><title type="html">Riding Rails</title><entry><title type="html">Rails versions 6.1.3.2, 6.0.3.7, 5.2.4.6, and 5.2.6 have been released!</title><link href="https://weblog.rubyonrails.org/2021/5/5/Rails-versions-6-1-3-2-6-0-3-7-5-2-4-6-and-5-2-6-have-been-released/" rel="alternate" type="text/html" title="Rails versions 6.1.3.2, 6.0.3.7, 5.2.4.6, and 5.2.6 have been released!" /><published>2021-05-05T17:16:05+00:00</published><updated>2021-05-05T17:16:05+00:00</updated><id>https://weblog.rubyonrails.org/2021/5/5/Rails-versions-6-1-3-2-6-0-3-7-5-2-4-6-and-5-2-6-have-been-released</id><content type="html" xml:base="https://weblog.rubyonrails.org/2021/5/5/Rails-versions-6-1-3-2-6-0-3-7-5-2-4-6-and-5-2-6-have-been-released/">&lt;p&gt;Hi everyone!  Rails versions 6.1.3.2, 6.0.3.7, 5.2.4.6, and 5.2.6 have been released!&lt;/p&gt;
+
+&lt;p&gt;These releases contain important security fixes, so please update when you can!
+Here is a list of the issues fixed:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://discuss.rubyonrails.org/t/cve-2021-22902-possible-denial-of-service-vulnerability-in-action-dispatch/77866&quot;&gt;[CVE-2021-22902] Possible Denial of Service vulnerability in Action Dispatch&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://discuss.rubyonrails.org/t/cve-2021-22903-possible-open-redirect-vulnerability-in-action-pack/77867&quot;&gt;[CVE-2021-22903] Possible Open Redirect Vulnerability in Action Pack&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://discuss.rubyonrails.org/t/cve-2021-22885-possible-information-disclosure-unintended-method-execution-in-action-pack/77868&quot;&gt;[CVE-2021-22885] Possible Information Disclosure / Unintended Method Execution in Action Pack&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://discuss.rubyonrails.org/t/cve-2021-22904-possible-dos-vulnerability-in-action-controller-token-authentication/77869&quot;&gt;[CVE-2021-22904] Possible DoS Vulnerability in Action Controller Token Authentication&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Here are the checksums for the gems:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ shasum -a 256 *-6.1.3.2.gem
+0792e3dde6f85d2fec45dd048b0fc84b6ecec94f5011bf44c210f278c2522697  actioncable-6.1.3.2.gem
+a58f9360bd724cfa5c69f428fb4f720727a028221cc34eeca3bce0e5521f39e0  actionmailbox-6.1.3.2.gem
+978b37c0defc62f07e664880b5f323ff4b4238e0b3f5d9a87668c5f7a7570ddb  actionmailer-6.1.3.2.gem
+a5165a3eaaaf9ee1652d645d5fddcf5a4b08b7a3e8c8d2bdb284ae4769d9aff1  actionpack-6.1.3.2.gem
+0787918e22bb621b55a3d569258c22e0365450120e47b3486dc1f3742d9bd9fd  actiontext-6.1.3.2.gem
+56fb0011ed74b19915c4068c0778d737ea9bbadc7ecd7461502c6b379e58cde4  actionview-6.1.3.2.gem
+b8f7949f79e583e69077e995fc084ed6c505012a7011f7faa41d7606d5ca005d  activejob-6.1.3.2.gem
+5459410a49855d18b89ecf2d509cb74924e37559a01a991b41d9fb4c201cedbe  activemodel-6.1.3.2.gem
+c8400e75c1caa43aefcc6dd1d21c427030f4190ee606931ff8f97da12a46e539  activerecord-6.1.3.2.gem
+0f4319e41fb01cc6c12f0bf7cd97a8dc79771fc1f6d308da3a246294c79c7769  activestorage-6.1.3.2.gem
+d9074834deca6676aabd432f16c392e991eca1f675cbcefc38671a0a7d6b5db3  activesupport-6.1.3.2.gem
+36680669c708bec0a4fb3cdcbae65df62fd99a2a94b0b1f60732ad8322bd963a  rails-6.1.3.2.gem
+027763dc9f2b24f085ed3684b6b3fc49f6c872e5844736ff80fb18d250be219f  railties-6.1.3.2.gem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ shasum -a 256 *-6.0.3.7.gem
+baf4fb13204f1f62de0b7fced46a18908293b641f38669a12329f05c3f13bbe8  actioncable-6.0.3.7.gem
+7271aa107cdaf6dff603cba8581c06e83f978ea4d3d43106a35fbf35028415de  actionmailbox-6.0.3.7.gem
+2fc1d2af0d6306e372870e0177c5c5d5fb373c32b3a178234c9df68865e651a4  actionmailer-6.0.3.7.gem
+32479c62b269c96fa511277b850d81711a32b12796d2654f026032ffe48961ab  actionpack-6.0.3.7.gem
+016aa2df7f0ad70deee31357497fcf43d91bc134b146eeb158e9896f2fc142cd  actiontext-6.0.3.7.gem
+e51ef8dd5e2096870beff4dd148fa798d810d4f25673ec9a47f083fe32e2a0c3  actionview-6.0.3.7.gem
+727c6eb841061fdde7090f6992c3c9bf30c3eacb4235e4935e930d8bb77ca93b  activejob-6.0.3.7.gem
+f1aceff039036d032b39b0b9a60b382e59aefd31ce5ad919c274e0142ed55ff7  activemodel-6.0.3.7.gem
+515f9e1fb3de980c1932e302b3fd4e403e6271fa5bd9155760225e920dcfa179  activerecord-6.0.3.7.gem
+e468a989cd6bae0db81199ea89cfaabe2553fc2bf6e2138239095939289116fa  activestorage-6.0.3.7.gem
+5f0c107e6d3a12e1e7348505d1a56f26c8cd8fc8dd5d75bd83bfa8eb894ee030  activesupport-6.0.3.7.gem
+41e295498229ae1134c052b2529df7835bd5639b92e54a30979b4b0d45601a6f  rails-6.0.3.7.gem
+82a3c056b4cc6efda8901db119647bf3a60963e7cbea7cddc9da22e680416161  railties-6.0.3.7.gem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ shasum -a 256 *-5.2.4.6.gem
+711ff7d3b3ccb43905a8badf9fdabef08fafd91ab6999dd9109f72f109db091c  actioncable-5.2.4.6.gem
+6b56dbb880c3045d3827a1a409570ff86253474c2328581670885621d74cf3b8  actionmailer-5.2.4.6.gem
+4e7bbbfe532e249c2a978211437640a15c6495bf0e8a6b51de950600d51911a8  actionpack-5.2.4.6.gem
+e8bc310867b528a87bc1a78f81049d3f20c876d005f49d73b0d9d3adf9d58936  actionview-5.2.4.6.gem
+01c6b9f10b3df6037b9c13d034caf32a88dc0cfc015120ecb59fc342fa61a391  activejob-5.2.4.6.gem
+753322f7b88e0284ff01ce55a419f44139f3fe98ed19025036eea26b5444a0e1  activemodel-5.2.4.6.gem
+e6484d9401102074091c5579e4a0fb9bb396691ad91e07b69e3b2a7fc416b987  activerecord-5.2.4.6.gem
+18a4bff2ccf88a7c3a81dc659d6f55090be7777f4af9f78dc7f67a5b72265249  activestorage-5.2.4.6.gem
+6a9301038fd96877eb5a7f942eb128bb1de1a9e50976af713802862747283ab9  activesupport-5.2.4.6.gem
+cb1369b8e341092cc154ef9ebb9b3a57801366ec32506d5166b9b2a6530eda7d  rails-5.2.4.6.gem
+b0c16fe7cabadca0cc466b6d8573773aa178f394a16de0aa227fe60c0c1a381d  railties-5.2.4.6.gem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ shasum -a 256 *-5.2.6.gem
+d523ec54bac8d37f587838aa5c502b87e6900c96fbc3b51dffc029f83845e7e8  actioncable-5.2.6.gem
+8ddac9dd54bd1f78a50682662a964a109daf9c26575e6bd2ed15c39929b19b3f  actionmailer-5.2.6.gem
+1e8c541046f3f8e40cdfe7894a4c5f1da7b910630a82bd97b4cf0b870aa15d2c  actionpack-5.2.6.gem
+ef2f9ca0ab876e890d5508da547bef6e7248f16e89c42bd35510d33b4510c819  actionview-5.2.6.gem
+cdf6435547ede7d2a7390f0e92f703421984e2794cb8b7086c8ce8f5d7ecbbb1  activejob-5.2.6.gem
+467f960c0d787a825e21687619d131acbcbaf645add91c5b34b5a1fc2d9b48e4  activemodel-5.2.6.gem
+ecbb022ce4b00c95323ce3bd8eedbd4d98e88497efb6d0c637b4f60759b41817  activerecord-5.2.6.gem
+d45ddb05fa5f341482fd1ebacf3d898362d2f300d9f7116e1ac3138d0353df72  activestorage-5.2.6.gem
+7249ee13859fc99ed2c833048674fd28c11605c679f1c65035190a2219e9cbef  activesupport-5.2.6.gem
+ccdef9f57c2c0f67faae9d5b6d155f5e61b033f944499ea09d6383e6626d27dc  rails-5.2.6.gem
+93202a5b7a3bf0344182271da0352b02cef7317a0a4de8ebba0f8eb0bb3b4967  railties-5.2.6.gem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Have a great day! 😬&lt;/p&gt;
+
+&lt;p&gt;-Aaron ❤️&lt;/p&gt;</content><author><name>tenderlove</name></author><category term="releases" /><summary type="html">Hi everyone! Rails versions 6.1.3.2, 6.0.3.7, 5.2.4.6, and 5.2.6 have been released!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://avatars.githubusercontent.com/u/4223" /><media:content medium="image" url="https://avatars.githubusercontent.com/u/4223" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Rails Governance</title><link href="https://weblog.rubyonrails.org/2021/5/2/rails-governance/" rel="alternate" type="text/html" title="Rails Governance" /><published>2021-05-02T17:45:00+00:00</published><updated>2021-05-02T17:45:00+00:00</updated><id>https://weblog.rubyonrails.org/2021/5/2/rails-governance</id><content type="html" xml:base="https://weblog.rubyonrails.org/2021/5/2/rails-governance/">&lt;p&gt;As some questions have been raised about how the Rails project’s governance functions, we’d like to clarify how the team is structured and how we operate:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Ruby on Rails is an Open Source project run by the Rails Core team. In addition to the Core team we have two additional teams - the Committer team who can merge code changes, as well as the Issues team who can triage issues and merge documentation changes.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;There are 11 members on the Core team who work for various employers or are independent consultants. We make decisions and work towards consensus as a team when needed. We each strive to make decisions that are best for the Rails framework and community. The members of the Core team are:&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;DHH, Basecamp&lt;/li&gt;
+      &lt;li&gt;Jeremy, Basecamp&lt;/li&gt;
+      &lt;li&gt;Aaron, Shopify&lt;/li&gt;
+      &lt;li&gt;Xavier, Independent Consultant&lt;/li&gt;
+      &lt;li&gt;Rafael, Shopify&lt;/li&gt;
+      &lt;li&gt;Andrew, Unboxed&lt;/li&gt;
+      &lt;li&gt;Guillermo, Treasure Data&lt;/li&gt;
+      &lt;li&gt;Carlos, YNAB&lt;/li&gt;
+      &lt;li&gt;Matthew, Buildkite&lt;/li&gt;
+      &lt;li&gt;Kasper, Independent Consultant&lt;/li&gt;
+      &lt;li&gt;Eileen, GitHub&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Through that consensus process, no one on the Core team, or their employers, have sole control over the framework or community. There is no individual or subset of individuals who have power to enact policies unilaterally in the Rails community spaces that we operate (for example on issues, pull requests, or the forum).&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;We encourage contributions from everyone and will work to make your experience as welcoming as possible.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We care deeply about the Rails community. The work we do on the framework is for you. We will continue to work at making Rails a great framework as well as a vibrant, diverse community of users and contributors.&lt;/p&gt;</content><author><name>The Rails Team</name></author><category term="news" /><summary type="html">As some questions have been raised about how the Rails project’s governance functions, we’d like to clarify how the team is structured and how we operate:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://avatars.githubusercontent.com/u/4223" /><media:content medium="image" url="https://avatars.githubusercontent.com/u/4223" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Rails 5.2.5, 6.0.3.6 and 6.1.3.1 have been released</title><link href="https://weblog.rubyonrails.org/2021/3/26/marcel-upgrade-releases/" rel="alternate" type="text/html" title="Rails 5.2.5, 6.0.3.6 and 6.1.3.1 have been released" /><published>2021-03-26T18:24:00+00:00</published><updated>2021-03-26T18:24:00+00:00</updated><id>https://weblog.rubyonrails.org/2021/3/26/marcel-upgrade-releases</id><content type="html" xml:base="https://weblog.rubyonrails.org/2021/3/26/marcel-upgrade-releases/">&lt;p&gt;Hey everyone! Rails versions 5.2.5, 6.0.3.6 and 6.1.3.1 have been released. These versions upgrade
+Active Storage’s &lt;a href=&quot;https://github.com/rails/marcel&quot;&gt;Marcel&lt;/a&gt; dependency to version 1.0.0.&lt;/p&gt;
+
+&lt;p&gt;Before 1.0.0, Marcel—which is distributed under the terms of the MIT License, like Rails—indirectly
+depended on MIME type data released under the incompatible GNU General Public License. Marcel 1.0.0
+instead directly packages MIME type data adapted from &lt;a href=&quot;https://tika.apache.org&quot;&gt;Apache Tika&lt;/a&gt;,
+released under the permissive and compatible Apache License 2.0.&lt;/p&gt;
+
+&lt;p&gt;Here are the gem checksums:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ shasum -a 256 *-5.2.5.gem
+3771ca29ee67914eda1b5de3d66a0c4bb0250bb244d76e8690dc5af2ff10e699  actioncable-5.2.5.gem
+5f58ae625622b1e5d2bf96101527a99e380f270fe030e2477d462f5229a7d5c5  actionmailer-5.2.5.gem
+15703d20c4a87c8145e78d36307d0c14fc6c9d838545f7c2d00c693a2d6b3cd5  actionpack-5.2.5.gem
+5158c075313cede79d8229d817e802475a4c13efc5ab14b7b9ac525e17738cf6  actionview-5.2.5.gem
+4c069412c5a76edf1c7883d991ed022d3601116cae5564f9cc15a7be08756502  activejob-5.2.5.gem
+cb00207f343b7909cb1c941aadc03aa3f1f3e88c5860cc37710fb4ae170066ad  activemodel-5.2.5.gem
+92f273af4904c37aa7c1168280353d46df5cf06e0a22733ff5b5b67e2a96f10f  activerecord-5.2.5.gem
+0dbf83f484898049d9de88bf485967fb9d9b22d87f0852707e2ad1ce72c4069c  activestorage-5.2.5.gem
+f257fc30343ee959ae8a5f7c632ec155b1f82bdf184efe71a0a9b402ecce3fae  activesupport-5.2.5.gem
+4c14aa2558250f2dbb85d4a5c6046159ff7cf285b86c367d9dae3eabcd501adc  rails-5.2.5.gem
+89aaedf132bf29419a7fccfc3cf1563153698f898364ea6c197b2176dbbf5a1c  railties-5.2.5.gem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ shasum -a 256 *-6.0.3.6.gem
+290f31df35234c011fd935fa58c38d21fbf28123c8813a1025fa60b7c8b88394  actioncable-6.0.3.6.gem
+436f4954e663c214ae1c011dfd7b53ecab9d1a4dfeb4d9352d24f30f613ddd36  actionmailbox-6.0.3.6.gem
+6e487e398276c2af9f451a105890ed552168d4a1ac53001e47e09c8e4fdadab2  actionmailer-6.0.3.6.gem
+df8f06b949a5ac4b076bf59327fda2958ba330718c9add472af5726beb3b3683  actionpack-6.0.3.6.gem
+5d174b50d91699ab6fc655d161fcfb0155b802d0ff3ea5ffc03aa4743fe9278e  actiontext-6.0.3.6.gem
+e56bce415cffa2494d2e527cf44d886a4821ad103816dd0caefd2c9d75bf7846  actionview-6.0.3.6.gem
+ecca43ddf86c454a882644495983d56cc2af8ed7e6bfc35be6b42a77a89fc9eb  activejob-6.0.3.6.gem
+8db2cf0cfda5a28c2110725ec3a5ea65078cd80a53ddf05b1863ab59e1437896  activemodel-6.0.3.6.gem
+7f13a2f1c085e0182d002ca10e584fd89f44acce897d2eb3abc4d7aab26070a8  activerecord-6.0.3.6.gem
+c2281a5afa4ae5d89d9fd888cb186ed94cc4f61558b89cb53efbbc002c768dcb  activestorage-6.0.3.6.gem
+ffec387149059506ea6623909c8c78f4bb25d9338491606fac5fb49bfa199a6a  activesupport-6.0.3.6.gem
+790a078dad5832c6b93c460cd9f530f85cf3233a4306135713e97c9f30e9bc06  rails-6.0.3.6.gem
+9935f0cbb7da1417ec45134b2b82518dd303a2d7bc832b5ac7dcccc6f4daa044  railties-6.0.3.6.gem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ shasum -a 256 *-6.1.3.1.gem
+0e9af083e8287ed67598f30ac0e9b6b19fda9ae8c6704540c3be9f78e0e02637  actioncable-6.1.3.1.gem
+c442b2419cc0523355e77813800bde86f8649d1348e3b1fdb9bd2e1caac06c70  actionmailbox-6.1.3.1.gem
+3186973422d29ea06c996e214b547ba292139e5302136261aaaa74f9d8344af3  actionmailer-6.1.3.1.gem
+3f261656798bf6eb05826346aab6930e72b43d42721e85bac88eb05ad74c392f  actionpack-6.1.3.1.gem
+abd6a9c82601632d94bb5a830b2da0f6387100b579433ab6607f9cc7fce9c711  actiontext-6.1.3.1.gem
+2409c795c5c27631b854cbe5762828e657780a6f788d7024e7100211674c0054  actionview-6.1.3.1.gem
+56f8db09344833b8bb426fbf76c91f795fb9340b4b42482c4dce794cb2635c7e  activejob-6.1.3.1.gem
+b52bb9d4cff30e3084c10b88dff081e5e0ccbdee5446a56a78c5454892a41a85  activemodel-6.1.3.1.gem
+af7acff9dbd71c974e1eb6c3059067e100d57e377db30e6135475669712c6acb  activerecord-6.1.3.1.gem
+b7d056ec86d200adc7e288e345c743a17ada89afac8b2ba6ff350503e2d400a0  activestorage-6.1.3.1.gem
+8c263a78c1278d621be523185788c1fcc0de78d9cf572b7b08c6feb3f2831350  activesupport-6.1.3.1.gem
+68889774d4716a7817f32ad18eefd2a5737966539cde5308c0536ef784e786fa  rails-6.1.3.1.gem
+ebe4ea356726f4422559607d20be580566cdac9f57027044a4c3a628759c6cd4  railties-6.1.3.1.gem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Have a great day!&lt;/p&gt;</content><author><name>georgeclaghorn</name></author><category term="releases" /><summary type="html">Hey everyone! Rails versions 5.2.5, 6.0.3.6 and 6.1.3.1 have been released. These versions upgrade Active Storage’s Marcel dependency to version 1.0.0.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://avatars.githubusercontent.com/u/4223" /><media:content medium="image" url="https://avatars.githubusercontent.com/u/4223" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Rails 6.1.3 has been released</title><link href="https://weblog.rubyonrails.org/2021/2/17/Rails-6-1-3-has-been-released/" rel="alternate" type="text/html" title="Rails 6.1.3 has been released" /><published>2021-02-17T18:45:27+00:00</published><updated>2021-02-17T18:45:27+00:00</updated><id>https://weblog.rubyonrails.org/2021/2/17/Rails-6-1-3-has-been-released</id><content type="html" xml:base="https://weblog.rubyonrails.org/2021/2/17/Rails-6-1-3-has-been-released/">&lt;p&gt;Hi everyone,&lt;/p&gt;
+
+&lt;p&gt;I am happy to announce that Rails 6.1.3 has been released.&lt;/p&gt;
+
+&lt;h2 id=&quot;changes-since-612&quot;&gt;CHANGES since 6.1.2&lt;/h2&gt;
+
+&lt;p&gt;To view the changes for each gem, please read the changelogs on GitHub:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.3/actioncable/CHANGELOG.md&quot;&gt;Action Cable CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.3/actionmailbox/CHANGELOG.md&quot;&gt;Action Mailbox CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.3/actionmailer/CHANGELOG.md&quot;&gt;Action Mailer CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.3/actionpack/CHANGELOG.md&quot;&gt;Action Pack CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.3/actiontext/CHANGELOG.md&quot;&gt;Action Text CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.3/actionview/CHANGELOG.md&quot;&gt;Action View CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.3/activejob/CHANGELOG.md&quot;&gt;Active Job CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.3/activemodel/CHANGELOG.md&quot;&gt;Active Model CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.3/activerecord/CHANGELOG.md&quot;&gt;Active Record CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.3/activestorage/CHANGELOG.md&quot;&gt;Active Storage CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.3/activesupport/CHANGELOG.md&quot;&gt;Active Support CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.3/railties/CHANGELOG.md&quot;&gt;Railties CHANGELOG&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To see a summary of changes, please read the release on GitHub:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/rails/rails/releases/tag/v6.1.3&quot;&gt;6.1.3 CHANGELOG&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Full listing&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;To see the full list of changes, &lt;a href=&quot;https://github.com/rails/rails/compare/v6.1.2...v6.1.3&quot;&gt;check out all the commits on
+GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;sha-256&quot;&gt;SHA-256&lt;/h2&gt;
+
+&lt;p&gt;If you’d like to verify that your gem is the same as the one I’ve uploaded,
+please use these SHA-256 hashes.&lt;/p&gt;
+
+&lt;p&gt;Here are the checksums for 6.1.3:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ shasum -a 256 *-6.1.3.gem
+3bc59df7dfa5bebda5fb50dd52df7f8bac824bbcb209353b9d3bd0fa000debb1  actioncable-6.1.3.gem
+b7291919c0b89c4c1aef58fe8dd265f94332929d4ff938919cc011db89b86273  actionmailbox-6.1.3.gem
+49ad423587cde9032ae01ca209ea52cda6b689a192e27663ba23626e58252c52  actionmailer-6.1.3.gem
+05ef482bcaa6390de3518468aaa199c4c13c32e7eba7462e2b2cd23fb5f21e0c  actionpack-6.1.3.gem
+0f436e5d135f5c1324d534cf66961482593051343575d0dffa4b03223bf96412  actiontext-6.1.3.gem
+857fa724c5470f79e245978b13feba877e41d8bb367c4aca0b2d9eb85460b3e8  actionview-6.1.3.gem
+aed2cbf9396239f2766e75cd72e47ad361b7ed4f1ce0ad65d7b441a60046ad9c  activejob-6.1.3.gem
+e02c3751e0768bf4732d2ca9595628fc5edcb2e429ff625eff2d3406402ea81e  activemodel-6.1.3.gem
+7ac74827f02bbd01be23cae93b8fcb22e77b2e9557b62813e231354ef536790e  activerecord-6.1.3.gem
+91342af6501c5d37a8d401c99520c69da1ff27086b7c1f6f6ff5235ee2da7d3e  activestorage-6.1.3.gem
+1009ad0f8a8bd3f752b59b25f60bf4dbb59ab115537d68a6f785a347cc6a4401  activesupport-6.1.3.gem
+7f097f7c565c7ce6c9a0c07345c3af61f9776d65b9bee2fda72718a53db3aa41  rails-6.1.3.gem
+2a133eeb9b2b19530ce049716268ae74c508e7cd7b0489c602983dc75af10599  railties-6.1.3.gem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;As always, huge thanks to the many contributors who helped with this release.&lt;/p&gt;</content><author><name>rafaelfranca</name></author><category term="releases" /><summary type="html">Hi everyone,</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://avatars.githubusercontent.com/u/4223" /><media:content medium="image" url="https://avatars.githubusercontent.com/u/4223" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Rails 5.2.4.5, 6.0.3.5 and 6.1.2.1 have been released</title><link href="https://weblog.rubyonrails.org/2021/2/10/Rails-5-2-4-5-6-0-3-5-and-6-1-2-1-have-been-released/" rel="alternate" type="text/html" title="Rails 5.2.4.5, 6.0.3.5 and 6.1.2.1 have been released" /><published>2021-02-10T21:43:28+00:00</published><updated>2021-02-10T21:43:28+00:00</updated><id>https://weblog.rubyonrails.org/2021/2/10/Rails-5-2-4-5-6-0-3-5-and-6-1-2-1-have-been-released</id><content type="html" xml:base="https://weblog.rubyonrails.org/2021/2/10/Rails-5-2-4-5-6-0-3-5-and-6-1-2-1-have-been-released/">&lt;p&gt;Hey everyone! Rails version 5.2.4.5, 6.0.3.5 and 6.1.2.1 have been released! Those version are
+security releases and addresses two issues:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://discuss.rubyonrails.org/t/cve-2021-22880-possible-dos-vulnerability-in-active-record-postgresql-adapter/77129&quot;&gt;[CVE-2021-22880] Possible DoS Vulnerability in Active Record PostgreSQL adapter&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://discuss.rubyonrails.org/t/cve-2021-22881-possible-open-redirect-in-host-authorization-middleware/77130&quot;&gt;[CVE-2021-22881] Possible Open Redirect in Host Authorization Middleware&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Here are the checksums for the gems:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ shasum -a 256 *-5.2.4.5.gem
+729c0ef823966a42519924c9f663f8cc81264a75b022777fab32087352299de6  actioncable-5.2.4.5.gem
+d73f50d0d32feba6e4170d1c03d877ce72c422d5beb2aad39853e1eb9bf0c5a7  actionmailer-5.2.4.5.gem
+182e5328ab1dd9c7f60a473dac01c31dabbe04755019033449d1c16ce91c08b6  actionpack-5.2.4.5.gem
+2c2129183e1999a8a8a47ad1125c129e6ee5ad76fa9500cc1f034251da4bae4f  actionview-5.2.4.5.gem
+cacf79caf005bbec89a30a4af6494395b2bf281ddf1cb5ee78bee7b513d164d5  activejob-5.2.4.5.gem
+f5fcbe15f3bf4390dbc7eb1e2c6a69aa793026a6149e29fec534cb69bb5c8461  activemodel-5.2.4.5.gem
+cfc9e2831fac5068b6dbbcf98129a8ba3491ab214d48d7bc5e229faf4232afea  activerecord-5.2.4.5.gem
+010152f9f09a9e654f38e1d7092fbb122d6ded58205692b7c40ebcbe8755238a  activestorage-5.2.4.5.gem
+8c25759e6c5df1de673e9bfc35e42f4c5e021d47a8dde103a00f17f1467ee43a  activesupport-5.2.4.5.gem
+cd4dd4b224e58a8bc03c3fb182fd748dda2f36abfae6ecd8db145a8c5da8fadb  rails-5.2.4.5.gem
+cde5e0326b7f600ac4bed5e1c5fd0a57074ec4c98981e1173f98d4f91d978fe3  railties-5.2.4.5.gem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ shasum -a 256 *-6.0.3.5.gem
+57da7287cfca8f35007dd7ff317d01dbc862725b1a1799ed150be1d985682455  actioncable-6.0.3.5.gem
+8ce0f2b94da995234df28a7cedd9551a6e9fc07b6d066c4a9a4a99e7744570ec  actionmailbox-6.0.3.5.gem
+1b187024f960bda2d9d3261e1feb66dd1c38d38f30a7c32a5c8529c0c45d1663  actionmailer-6.0.3.5.gem
+7680d8eaa6d62c095c2fc0b5dee6ac847248fa6ffe8de0c5cd3fc86444463683  actionpack-6.0.3.5.gem
+3617c8fb6ebb4d6b5277971910c2ce66dba54d23e9ee3de6b8afdbb5b0010711  actiontext-6.0.3.5.gem
+3b1c114de883190347b7f693025d627a3091dbc6c33ed9367a985812c6c5241b  actionview-6.0.3.5.gem
+a50feb20997dd16901e15303ff0a7ec598c31918487a967a913107a0f1d24695  activejob-6.0.3.5.gem
+7018b906bc9131180f19009e66e12329573589f62e3c5cab6a7b6032d5e8db07  activemodel-6.0.3.5.gem
+684fb6b075c774a193f2253b6373df7b9f96b9d8a199c3f606fe04849c242d9f  activerecord-6.0.3.5.gem
+4a28c519951fb768b9306baf11a31872217449b5b2da2e51d69812daaac0ce1f  activestorage-6.0.3.5.gem
+74714fcffa24cda6bef4c66b84207a8ea037c2c1d34cc06c02816187df5d7f55  activesupport-6.0.3.5.gem
+0a914868970c2f8cf3ca5e6e331337d630d8994a4bdbe62a919258fcb274fb05  rails-6.0.3.5.gem
+273f83c9db727a652fb7921dd3e9fc62de7051faf8c7e9412f10a17661ec2a1d  railties-6.0.3.5.gem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ shasum -a 256 *-6.1.2.1.gem
+4267ad208cb8465879757d1f96e680325d803c8b73b9766bfb5cd598f35cb2a2  actioncable-6.1.2.1.gem
+64485af94d4401b0f9db22316011eab5f5dbf85c914d209d91267ddc041824b9  actionmailbox-6.1.2.1.gem
+e592f49d31ac3435a091997858b8acec13ef54d9dcc8167f7ba25fae327ab8db  actionmailer-6.1.2.1.gem
+c25cb7dfe362a4d9c92e9a746810a6a9bf4db5c864785b681319b59e4c860ff3  actionpack-6.1.2.1.gem
+c04664f9b6b52a0b8dd32dfac08290601b1ddf8a06e926ec0f57a5f9fb38bf26  actiontext-6.1.2.1.gem
+93df05374f79cf3d23778c5131babed120b51dcceb2ec79e3efb55a09aed955d  actionview-6.1.2.1.gem
+325373503de3ebd2a44d699fc0079d3e2909fb6549145066ad682906e9389023  activejob-6.1.2.1.gem
+d19e1931217ed00fafe69fe98d9ee92d385f6a92ac7200a844a5f9b4c548a4ee  activemodel-6.1.2.1.gem
+cab04eb203c17429dab1ddcaf8357865eb5e41dceb7ad1fdef69f815870934fa  activerecord-6.1.2.1.gem
+5d4f2b696947d141ca98a132d94fc82115ed707c535c13a57db1e9c6e344ab13  activestorage-6.1.2.1.gem
+7155b715636faa2970123501f2356d3dc7390dcd9f2f9cb455f91e5d5b4ee250  activesupport-6.1.2.1.gem
+32409615eb41eb7719a82715c6d167757f18d9080a6ba7fa7fcf6e1b59f52112  rails-6.1.2.1.gem
+fd8a3cd6753230bf51601aa308f04909033870fe3fc8fb0a3e6fb8dde2133ce1  railties-6.1.2.1.gem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Have a great day!&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;3&lt;/p&gt;</content><author><name>rafaelfranca</name></author><category term="releases" /><summary type="html">Hey everyone! Rails version 5.2.4.5, 6.0.3.5 and 6.1.2.1 have been released! Those version are security releases and addresses two issues:</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://avatars.githubusercontent.com/u/4223" /><media:content medium="image" url="https://avatars.githubusercontent.com/u/4223" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Rails 6.1.2 has been released!</title><link href="https://weblog.rubyonrails.org/2021/2/9/Rails-6-1-2-has-been-released/" rel="alternate" type="text/html" title="Rails 6.1.2 has been released!" /><published>2021-02-09T22:42:21+00:00</published><updated>2021-02-09T22:42:21+00:00</updated><id>https://weblog.rubyonrails.org/2021/2/9/Rails-6-1-2-has-been-released-</id><content type="html" xml:base="https://weblog.rubyonrails.org/2021/2/9/Rails-6-1-2-has-been-released/">&lt;p&gt;Hi everyone,&lt;/p&gt;
+
+&lt;p&gt;I am happy to announce that Rails 6.1.2 has been released.&lt;/p&gt;
+
+&lt;h2 id=&quot;changes-since-611&quot;&gt;CHANGES since 6.1.1&lt;/h2&gt;
+
+&lt;p&gt;To view the changes for each gem, please read the changelogs on GitHub:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.2/actioncable/CHANGELOG.md&quot;&gt;Action Cable CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.2/actionmailbox/CHANGELOG.md&quot;&gt;Action Mailbox CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.2/actionmailer/CHANGELOG.md&quot;&gt;Action Mailer CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.2/actionpack/CHANGELOG.md&quot;&gt;Action Pack CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.2/actiontext/CHANGELOG.md&quot;&gt;Action Text CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.2/actionview/CHANGELOG.md&quot;&gt;Action View CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.2/activejob/CHANGELOG.md&quot;&gt;Active Job CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.2/activemodel/CHANGELOG.md&quot;&gt;Active Model CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.2/activerecord/CHANGELOG.md&quot;&gt;Active Record CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.2/activestorage/CHANGELOG.md&quot;&gt;Active Storage CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.2/activesupport/CHANGELOG.md&quot;&gt;Active Support CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.2/railties/CHANGELOG.md&quot;&gt;Railties CHANGELOG&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To see a summary of changes, please read the release on GitHub:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/rails/rails/releases/tag/v6.1.2&quot;&gt;6.1.2 CHANGELOG&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Full listing&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;To see the full list of changes, &lt;a href=&quot;https://github.com/rails/rails/compare/v6.1.1...v6.1.2&quot;&gt;check out all the commits on
+GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;sha-256&quot;&gt;SHA-256&lt;/h2&gt;
+
+&lt;p&gt;If you’d like to verify that your gem is the same as the one I’ve uploaded,
+please use these SHA-256 hashes.&lt;/p&gt;
+
+&lt;p&gt;Here are the checksums for 6.1.2:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ shasum -a 256 *-6.1.2.gem
+fd12348ec00f26b2f247e23cbe73804755c90236d9aebcbc136fc149ebee0901  actioncable-6.1.2.gem
+3fd0400d1277c711e085162c5a35caa15dd98f84fefc4a0773dc336a1fef65e0  actionmailbox-6.1.2.gem
+98118a814826715a9f88cc0ff07a517a229d21ce08e53ed5024e0af889292689  actionmailer-6.1.2.gem
+16d09ebb77253a30abe7eb4fd554d17706418f639c61da9a14903ddbf72976ae  actionpack-6.1.2.gem
+0b7dc18051a91b995298971e3871a8e20be088a2a2831e484bacfeeebcf6cb77  actiontext-6.1.2.gem
+7c72aeae52d42ce3757a5ae4ef68b0e8ece09ce26baea071ed4fa80cae1a0406  actionview-6.1.2.gem
+f297e27c0c2d5363e7b574806939944e3656a34eb32b5b43a28a059e9c4a6ca3  activejob-6.1.2.gem
+58fd5b3b68ca2a54c6ba7801936e9cb6b1ce50c6154f894dbaf6275cb8778c4b  activemodel-6.1.2.gem
+8e8fdeb864b02a7a360d78bc97f5064a53bcacbc812c8ae4e9ea5cf6d1e28f1e  activerecord-6.1.2.gem
+fd19ac42caf2a8a654027eb510092cdf8d43384e352dc397246aac9bccf62469  activestorage-6.1.2.gem
+098f2cc82f7232364ad9493155d3a34f44baecb5b51ce6646a015396a6d525a8  activesupport-6.1.2.gem
+e62c90c4a62f0d177161e0df05d7ba417010858fa418affdb2d93981e407a04e  rails-6.1.2.gem
+753527d97b2f68db999417a30d274b62317e082a7f96f88e7e1b10c846ad6d21  railties-6.1.2.gem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;As always, huge thanks to the many contributors who helped with this release.&lt;/p&gt;</content><author><name>rafaelfranca</name></author><category term="releases" /><summary type="html">Hi everyone,</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://avatars.githubusercontent.com/u/4223" /><media:content medium="image" url="https://avatars.githubusercontent.com/u/4223" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Defaults to “main” branch name, new webpacker guide and improved strict loading</title><link href="https://weblog.rubyonrails.org/2021/1/24/this-week-in-rails-defaults-to-main-branch-name-new-webpacker-guide-and-improved-strict-loading/" rel="alternate" type="text/html" title="Defaults to “main” branch name, new webpacker guide and improved strict loading" /><published>2021-01-24T00:00:00+00:00</published><updated>2021-01-24T00:00:00+00:00</updated><id>https://weblog.rubyonrails.org/2021/1/24/this-week-in-rails-defaults-to-main-branch-name-new-webpacker-guide-and-improved-strict-loading</id><content type="html" xml:base="https://weblog.rubyonrails.org/2021/1/24/this-week-in-rails-defaults-to-main-branch-name-new-webpacker-guide-and-improved-strict-loading/">&lt;p&gt;Hi, &lt;a href=&quot;https://twitter.com/morgoth85&quot;&gt;Wojtek&lt;/a&gt; here with the summary of changes from the last days.&lt;/p&gt;
+
+&lt;h3 id=&quot;renamed-master-branch-to-main-in-the-rails-repository&quot;&gt;&lt;a href=&quot;https://github.com/rails/rails/commit/077c66d5d6ef3a6f1cc54e4a431bfa5ea6831b97&quot;&gt;Renamed master branch to main in the Rails repository&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;As &lt;a href=&quot;https://twitter.com/dhh/status/1350091751789375490&quot;&gt;mentioned by DHH&lt;/a&gt; and &lt;a href=&quot;https://twitter.com/rafaelfranca/status/1350183929060483074&quot;&gt;performed by Rafael França&lt;/a&gt; the default branch for most of the Rails git repositories is now called “main”.&lt;/p&gt;
+
+&lt;h3 id=&quot;webpacker-added-to-edge-guides&quot;&gt;&lt;a href=&quot;https://github.com/rails/rails/pull/40817&quot;&gt;Webpacker added to edge guides&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;The detailed guide how to use &lt;em&gt;webpack&lt;/em&gt; build system with Rails via &lt;em&gt;webpacker&lt;/em&gt; gem. You can read it on &lt;a href=&quot;https://edgeguides.rubyonrails.org/webpacker.html&quot;&gt;edge guides&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;opting-out-of-strict-loading-on-a-per-record-base&quot;&gt;&lt;a href=&quot;https://github.com/rails/rails/pull/41181&quot;&gt;Opting out of strict loading on a per-record base&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;This is useful when &lt;a href=&quot;https://github.com/rails/rails/pull/37400&quot;&gt;strict loading&lt;/a&gt; is enabled application wide or on the model level.&lt;/p&gt;
+
+&lt;h3 id=&quot;improved-strict-loading-violation-error-message&quot;&gt;&lt;a href=&quot;https://github.com/rails/rails/pull/41114&quot;&gt;Improved strict loading violation error message&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;This change updates the error message to include both the class and the association name which makes it clear what exactly failed.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://contributors.rubyonrails.org/contributors/in-time-window/20210111-20210122&quot;&gt;39 people&lt;/a&gt; contributed to Rails since last time. Check out the &lt;a href=&quot;https://github.com/rails/rails/issues&quot;&gt;open issues&lt;/a&gt; to get involved and help out. Until next week!&lt;/p&gt;</content><author><name>morgoth85</name></author><category term="news" /><summary type="html">Hi, Wojtek here with the summary of changes from the last days.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://avatars.githubusercontent.com/u/4223" /><media:content medium="image" url="https://avatars.githubusercontent.com/u/4223" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Hello 2021: Sole record, Same form multiple verbs, Validator with range, Rich text control</title><link href="https://weblog.rubyonrails.org/2021/1/11/this-week-in-rails-hello-2021-sole-record-same-form-multiple-verbs-validator-with-range-rich-text-control/" rel="alternate" type="text/html" title="Hello 2021: Sole record, Same form multiple verbs, Validator with range, Rich text control" /><published>2021-01-11T00:00:00+00:00</published><updated>2021-01-11T00:00:00+00:00</updated><id>https://weblog.rubyonrails.org/2021/1/11/this-week-in-rails-hello-2021-sole-record-same-form-multiple-verbs-validator-with-range-rich-text-control</id><content type="html" xml:base="https://weblog.rubyonrails.org/2021/1/11/this-week-in-rails-hello-2021-sole-record-same-form-multiple-verbs-validator-with-range-rich-text-control/">&lt;p&gt;Hi there. &lt;a href=&quot;https://andyatkinson.com/&quot;&gt;Andy&lt;/a&gt; here, with the first newsletter of 2021, highlighting some updates to Ruby on Rails over the last few weeks. Let’s jump right in!&lt;/p&gt;
+
+&lt;h3 id=&quot;find-and-assert-the-presence-of-exactly-one-record&quot;&gt;&lt;a href=&quot;https://github.com/rails/rails/pull/40768&quot;&gt;Find and assert the presence of exactly one record&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Add &lt;em&gt;FinderMethods#sole&lt;/em&gt; and &lt;em&gt;#find_sole_by&lt;/em&gt; to find and assert the presence of exactly one record.&lt;/p&gt;
+
+&lt;h3 id=&quot;submit-the-same-form-with-different-http-methods&quot;&gt;&lt;a href=&quot;https://github.com/rails/rails/pull/41045&quot;&gt;Submit the same form with different HTTP methods&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;This change provides the ability to post the same form with different HTTP methods. For example PUT and a DELETE requests can be made from the same form.&lt;/p&gt;
+
+&lt;h3 id=&quot;validate-numericality-with-a-range&quot;&gt;&lt;a href=&quot;https://github.com/rails/rails/pull/41022&quot;&gt;Validate numericality with a Range&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;A Ruby range can now be provided as part of a numericality validator.&lt;/p&gt;
+
+&lt;h3 id=&quot;improve-action-text-extensibility&quot;&gt;&lt;a href=&quot;https://github.com/rails/rails/pull/40308&quot;&gt;Improve Action Text extensibility&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Allow the HTML surrounding rich text to be customized while retaining private control over how the rich text itself is rendered.&lt;/p&gt;
+
+&lt;h3 id=&quot;consistently-render-button_to&quot;&gt;&lt;a href=&quot;https://github.com/rails/rails/pull/40747&quot;&gt;Consistently render button_to&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Change Action View helpers to always render a &lt;em&gt;&amp;lt;button&amp;gt;&lt;/em&gt; element.&lt;/p&gt;
+
+&lt;h3 id=&quot;add-stats-to-redis-cache-store&quot;&gt;&lt;a href=&quot;https://github.com/rails/rails/pull/40929&quot;&gt;Add stats to Redis Cache Store&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Add a &lt;em&gt;RedisCacheStore#stats&lt;/em&gt; method that is similar to &lt;em&gt;MemCacheStore#stats&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;add-option-to-disable-the-link-header&quot;&gt;&lt;a href=&quot;https://github.com/rails/rails/pull/40882&quot;&gt;Add option to disable the Link header&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;The option &lt;em&gt;config.action_view.preload_links_header&lt;/em&gt; was added to allow disabling of the Link header when using &lt;em&gt;stylesheet_link_tag&lt;/em&gt; and &lt;em&gt;javascript_include_tag&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;fix-respect-getter-overwrites-in-the-model&quot;&gt;&lt;a href=&quot;https://github.com/rails/rails/pull/40782&quot;&gt;Fix: Respect getter overwrites in the model&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;ActiveRecord::AttributeMethods::Query&lt;/em&gt; will now respect the getter overrides defined in the model.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://contributors.rubyonrails.org/contributors/in-time-window/20201219-20210110&quot;&gt;45 people&lt;/a&gt; contributed to Rails over the last several weeks. Check out the &lt;a href=&quot;https://github.com/rails/rails/issues&quot;&gt;open issues&lt;/a&gt; to get involved and help out. Until next week!&lt;/p&gt;</content><author><name>andyatkinson</name></author><category term="news" /><summary type="html">Hi there. Andy here, with the first newsletter of 2021, highlighting some updates to Ruby on Rails over the last few weeks. Let’s jump right in!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://avatars.githubusercontent.com/u/4223" /><media:content medium="image" url="https://avatars.githubusercontent.com/u/4223" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Rails 6.1.1 has been released</title><link href="https://weblog.rubyonrails.org/2021/1/7/Rails-6-1-1-has-been-released/" rel="alternate" type="text/html" title="Rails 6.1.1 has been released" /><published>2021-01-07T23:05:10+00:00</published><updated>2021-01-07T23:05:10+00:00</updated><id>https://weblog.rubyonrails.org/2021/1/7/Rails-6-1-1-has-been-released</id><content type="html" xml:base="https://weblog.rubyonrails.org/2021/1/7/Rails-6-1-1-has-been-released/">&lt;p&gt;Hi everyone,&lt;/p&gt;
+
+&lt;p&gt;I am happy to announce that Rails 6.1.1 has been released.&lt;/p&gt;
+
+&lt;h2 id=&quot;changes-since-610&quot;&gt;CHANGES since 6.1.0&lt;/h2&gt;
+
+&lt;p&gt;To view the changes for each gem, please read the changelogs on GitHub:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.1/actioncable/CHANGELOG.md&quot;&gt;Action Cable CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.1/actionmailbox/CHANGELOG.md&quot;&gt;Action Mailbox CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.1/actionmailer/CHANGELOG.md&quot;&gt;Action Mailer CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.1/actionpack/CHANGELOG.md&quot;&gt;Action Pack CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.1/actiontext/CHANGELOG.md&quot;&gt;Action Text CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.1/actionview/CHANGELOG.md&quot;&gt;Action View CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.1/activejob/CHANGELOG.md&quot;&gt;Active Job CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.1/activemodel/CHANGELOG.md&quot;&gt;Active Model CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.1/activerecord/CHANGELOG.md&quot;&gt;Active Record CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.1/activestorage/CHANGELOG.md&quot;&gt;Active Storage CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.1/activesupport/CHANGELOG.md&quot;&gt;Active Support CHANGELOG&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rails/rails/blob/v6.1.1/railties/CHANGELOG.md&quot;&gt;Railties CHANGELOG&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To see a summary of changes, please read the release on GitHub:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/rails/rails/releases/tag/v6.1.1&quot;&gt;6.1.1 CHANGELOG&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Full listing&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;To see the full list of changes, &lt;a href=&quot;https://github.com/rails/rails/compare/v6.1.0...v6.1.1&quot;&gt;check out all the commits on
+GitHub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;sha-256&quot;&gt;SHA-256&lt;/h2&gt;
+
+&lt;p&gt;If you’d like to verify that your gem is the same as the one I’ve uploaded,
+please use these SHA-256 hashes.&lt;/p&gt;
+
+&lt;p&gt;Here are the checksums for 6.1.1:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ shasum -a 256 *-6.1.1.gem
+bc156d04d7a2f5d0702e319a3e01751ccff27e54a627a1beebb3cb89dff1aefe  actioncable-6.1.1.gem
+34146a9e7a3ea23824c53f42593d6a621ffc653686c186f9a379fce30737e2fa  actionmailbox-6.1.1.gem
+9c4394d61b22d791c38dcf026b91039e1b5a86ea634b67fe2cd9b7cc06168f17  actionmailer-6.1.1.gem
+3ecfe3b11e31e4a9e6db771244085c7783b482b82380fdce52abd11dab1153e3  actionpack-6.1.1.gem
+6e749845fca914cf0ba4358d96eb8d8428b903a0192442aa9c3edfdace6c996c  actiontext-6.1.1.gem
+dc9e6c2a15e66601822d089c7f4322c2a44fa86ae6c53bea57ef0bcdd8597e9f  actionview-6.1.1.gem
+f35e026b49d9f53b70aece18846a641446f0bc3f78640612806330d55502a189  activejob-6.1.1.gem
+b2b9d455446097e36968c009644a3c38345d1cbc449028e20a4bd43fb63fd12f  activemodel-6.1.1.gem
+d10fa2c7a91b3b24a7b42b47590d3d5c46b80eb49a63c184a6cd1743ee31e9da  activerecord-6.1.1.gem
+798b2806b3f485a7b65e8b39944a65ef216d39f92dfa3e7dcd0d829e5051a4b8  activestorage-6.1.1.gem
+a1d7d91586b2bbebb93f931802e5b1ceab565137d0769c55d9941052de85ea22  activesupport-6.1.1.gem
+b7710f82e68af72db1ffa30ff3d67437e8fb91c26255659f3c2602964b834a64  rails-6.1.1.gem
+fa0818457755b22de1fc673d8e924300f8f730fc4c2a223bd9a94837f7ce81c5  railties-6.1.1.gem
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;As always, huge thanks to the many contributors who helped with this release.&lt;/p&gt;</content><author><name>rafaelfranca</name></author><category term="releases" /><summary type="html">Hi everyone,</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://avatars.githubusercontent.com/u/4223" /><media:content medium="image" url="https://avatars.githubusercontent.com/u/4223" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">This week in Rails: benchmark anywhere, bugfixes and more!</title><link href="https://weblog.rubyonrails.org/2020/12/20/this-week-in-rails-rails-6-1-benchmark-anywhere-bugfixes-and-more/" rel="alternate" type="text/html" title="This week in Rails: benchmark anywhere, bugfixes and more!" /><published>2020-12-20T00:00:00+00:00</published><updated>2020-12-20T00:00:00+00:00</updated><id>https://weblog.rubyonrails.org/2020/12/20/this-week-in-rails-rails-6-1-benchmark-anywhere-bugfixes-and-more</id><content type="html" xml:base="https://weblog.rubyonrails.org/2020/12/20/this-week-in-rails-rails-6-1-benchmark-anywhere-bugfixes-and-more/">&lt;p&gt;Hi there, it is &lt;a href=&quot;https://twitter.com/gregmolnar&quot;&gt;Greg&lt;/a&gt;, bringing you the latest news about Rails!&lt;/p&gt;
+
+&lt;h3 id=&quot;rails-61-released-horizontal-sharding-multi-db-improvements-strict-loading-destroy-associations-in-background-error-objects-and-more&quot;&gt;&lt;a href=&quot;https://weblog.rubyonrails.org/2020/12/9/Rails-6-1-0-release/&quot;&gt;Rails 6.1 released! Horizontal Sharding, Multi-DB Improvements, Strict Loading, Destroy Associations in Background, Error Objects, and more!&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Rails 6.1 has been released and wow does it have a lot of great stuff! The changes include improvements to multiple databases, adding support for destroying associations in jobs instead of in-memory, turning errors into objects, and so much more.&lt;/p&gt;
+
+&lt;h3 id=&quot;add-benchmark-method-that-can-be-called-from-anywhere&quot;&gt;&lt;a href=&quot;https://github.com/rails/rails/pull/40734&quot;&gt;Add benchmark method that can be called from anywhere&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;This PR includes the existing &lt;em&gt;ActiveSupport::Benchmarkable&lt;/em&gt; into the &lt;em&gt;Rails&lt;/em&gt; module, to make it accessible from anywhere (background jobs etc).&lt;/p&gt;
+
+&lt;h3 id=&quot;add-configaction_viewimage_loading&quot;&gt;&lt;a href=&quot;https://github.com/rails/rails/pull/38452&quot;&gt;Add config.action_view.image_loading&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Browser native support for lazy loading images is now a part of the official HTML standard and this PR adds &lt;em&gt;Rails.application.config.action_view.image_loading&lt;/em&gt; to configure sitewide default for the &lt;em&gt;loading&lt;/em&gt; html attribute to enable lazy loading sitewide without changing code.&lt;/p&gt;
+
+&lt;h3 id=&quot;add-configaction_viewimage_decoding&quot;&gt;&lt;a href=&quot;https://github.com/rails/rails/pull/40839&quot;&gt;Add config.action_view.image_decoding&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Another &lt;em&gt;image_tag&lt;/em&gt; change, which introduces &lt;em&gt;Rails.application.config.action_view.image_decoding&lt;/em&gt; to configure the default value of the image_tag :decoding option.&lt;/p&gt;
+
+&lt;h3 id=&quot;better-handling-of-negative-elements-in-enum&quot;&gt;&lt;a href=&quot;https://github.com/rails/rails/pull/40679&quot;&gt;Better handling of negative elements in enum&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Rails gives a warning if an enum method uses the &lt;em&gt;not_&lt;/em&gt; prefix as it might conflict with negative scopes. The initial implementation warned even when there was no actual conflict and this change improves that and only warns about negative enums if a positive form that would cause conflicts exists.&lt;/p&gt;
+
+&lt;h3 id=&quot;do-not-use-submit_tag-auto-disabling-when-disable_with-is-set-to-false&quot;&gt;&lt;a href=&quot;https://github.com/rails/rails/pull/40168&quot;&gt;Do not use submit_tag auto-disabling when disable_with is set to false&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;If we have &lt;em&gt;data: { disable_with: false }&lt;/em&gt; then auto-disabling is turned off, but if we set &lt;em&gt;automatically_disable_submit_tag&lt;/em&gt; to false it changes the behaviour of &lt;em&gt;disable_with&lt;/em&gt; in an unexpected way,  so explicit usage of &lt;em&gt;disable_with: false&lt;/em&gt; starts to enable auto-disabling with false as the value of a disabled button.&lt;br /&gt;
+With this change auto-disabling is turned off if we have explicit &lt;em&gt;disable_with: false&lt;/em&gt; no matter what is set in &lt;em&gt;automatically_disable_submit_tag&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;ignore-strict-loading-violations-on-instances-loaded-through-fixtures&quot;&gt;&lt;a href=&quot;https://github.com/rails/rails/pull/40792&quot;&gt;Ignore strict loading violations on instances loaded through fixtures&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Rails 6.1 added _strict_loading_by_default _but that causes issues with the fixtures as they are lazy loaded. To get around it, this change ignores the strict loading flag when the fixtures are loaded.&lt;/p&gt;
+
+&lt;h3 id=&quot;fix-s3-multipart-uploads-when-threshold-is-larger-than-the-file-uploaded&quot;&gt;&lt;a href=&quot;https://github.com/rails/rails/pull/40793&quot;&gt;Fix S3 multipart uploads when threshold is larger than the file uploaded&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;A bug happened when the file being uploaded to S3 is smaller than the configured multipart threshold, but this PR fixed it.&lt;/p&gt;
+
+&lt;h3 id=&quot;allow-reload-to-be-default_scoped&quot;&gt;&lt;a href=&quot;https://github.com/rails/rails/pull/40805&quot;&gt;Allow reload to be default_scoped&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;em&gt;reload&lt;/em&gt; was not default_scoped by default because you could be creating a record that does not match your default scope and therefore reload wouldn’t find the record. However, in the case of sharding an application you may want reload to&lt;br /&gt;
+support default_scope because you’ll always have the correct scope&lt;br /&gt;
+set. &lt;/p&gt;
+
+&lt;h3 id=&quot;change-default-queue-name-of-all-the-internal-jobs-to-be-the-job-adapters&quot;&gt;&lt;a href=&quot;https://github.com/rails/rails/pull/40766&quot;&gt;Change default queue name of all the internal jobs to be the job adapter’s&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;Before this change you needed to configure your job processor to handle all of Rails’ internal job queues, but not anymore!&lt;/p&gt;
+
+&lt;h3 id=&quot;handle-nil-translation-key&quot;&gt;&lt;a href=&quot;https://github.com/rails/rails/pull/40788&quot;&gt;Handle nil translation key&lt;/a&gt;&lt;/h3&gt;
+
+&lt;p&gt;In Rails 6.0, the translate helper always returned &lt;em&gt;nil&lt;/em&gt; when given a &lt;em&gt;nil&lt;/em&gt; key, but in Rails 6.1, the translate helper always raised an &lt;em&gt;I18n::ArgumentError&lt;/em&gt; when given a &lt;em&gt;nil&lt;/em&gt; key. This PR fixes the translate helper to mirror the &lt;em&gt;I18n.translate&lt;/em&gt; behaviour when given a &lt;em&gt;nil&lt;/em&gt; key, with and without a default.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://contributors.rubyonrails.org/contributors/in-time-window/20201204-20201218&quot;&gt;45 people&lt;/a&gt; contributed to Rails in the past 2 weeks. Check out the &lt;a href=&quot;https://github.com/rails/rails/issues&quot;&gt;open issues&lt;/a&gt; if you want to be one if them next time!. Until next week!&lt;/p&gt;</content><author><name>gregmolnar</name></author><category term="news" /><summary type="html">Hi there, it is Greg, bringing you the latest news about Rails!</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://avatars.githubusercontent.com/u/4223" /><media:content medium="image" url="https://avatars.githubusercontent.com/u/4223" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
