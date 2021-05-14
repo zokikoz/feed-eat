@@ -15,7 +15,20 @@ RSpec.describe Channel, type: :model do
     expect(subject).to_not be_valid
   end
 
-  wrong_urls = %w[http:// http:fake ruby.rss]
+  # Checking validator with shoulda matchers
+  describe "HTML link" do
+    it { should_not allow_value("http://www.example.com").for(:link) }
+  end
+
+  # Checking validator by error response
+  it "is not valid without RSS/Atom feed" do
+    subject.link = 'http://www.example.com'
+    subject.validate
+    expect(subject.errors[:link]).to include("is invalid RSS format")
+  end
+
+  # Checking validator using array of values
+  wrong_urls = %w[http://www.example.com http:fake ruby.rss]
   wrong_urls.each do |url|
     it "is not valid with bad URL" do
       subject.link = url

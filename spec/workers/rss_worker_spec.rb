@@ -11,6 +11,6 @@ RSpec.describe RssWorker, type: :worker do
   end
   it "is load entries to items table" do
     Item.delete_all
-    expect { RssWorker.perform_async }.to change { Item.count }.from(0)
+    expect { RssWorker.perform_async }.to change { Item.count }.by(10)
   end
 end
