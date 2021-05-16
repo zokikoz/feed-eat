@@ -1,7 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Channel, type: :model do
-  subject { described_class.new(link: nil) }
+  it "is not valid without a link" do
+    subject { described_class.new(link: nil) }
+    expect(subject).to_not be_valid
+  end
 
   describe "Associations" do
     it { should have_many(:items) }
@@ -12,8 +15,8 @@ RSpec.describe Channel, type: :model do
     it { should validate_uniqueness_of(:link).ignoring_case_sensitivity }
   end
 
-  it "is not valid without a link" do
-    expect(subject).to_not be_valid
+  describe "Presence" do
+    it { should validate_presence_of(:link) }
   end
 
   # Checking validator with shoulda matchers

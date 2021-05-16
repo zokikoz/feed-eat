@@ -1,7 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Item, type: :model do
-  subject { described_class.new(link: nil) }
+  it "is not valid without a guid" do
+    subject { described_class.new(guid: nil) }
+    expect(subject).to_not be_valid
+  end
 
   describe "Associations" do
     it { should belong_to(:channel) }
