@@ -8,6 +8,7 @@ RSpec.describe Item, type: :model do
   end
 
   describe "Uniqueness" do
+    subject { FactoryBot.build(:item) }
     it { should validate_uniqueness_of(:guid) }
   end
 end

@@ -8,7 +8,8 @@ RSpec.describe Channel, type: :model do
   end
 
   describe "Uniqueness" do
-    it { should validate_uniqueness_of(:link) }
+    subject { FactoryBot.build(:channel) }
+    it { should validate_uniqueness_of(:link).ignoring_case_sensitivity }
   end
 
   it "is not valid without a link" do
