@@ -3,33 +3,58 @@ class RssWorker
 
   def perform
     Channel.all.each do |channel|
-      logger.info "Updating #{channel.link}"
-      URI.parse(channel.link).open do |rss|
-        feed = RSS::Parser.parse(rss)
-        # Content based parser
-        case feed.feed_type
-        when 'rss'
-          rss_update(feed.channel.items, channel)
-        when 'atom'
-          atom_update(feed.entries, channel)
-        end
-      end
+      feed = feed_connect(channel.link)
+      selected_items = feed_select(feed)
+      items_update(selected_items, channel)
     end
   end
 
   private
 
-  def rss_update(items, channel)
-    items.each do |item|
-      selected_item = channel.items.where(guid: item.guid.content).first_or_initialize
-      selected_item.update(title: item.title, description: item.description, link: item.link, pub_date: item.pubDate.rfc2822)
-    end
+  # Feed connector
+  def feed_connect(link)
+    logger.info "Connecting #{link}"
+    feed_url = URI.parse(link)
+    RSS::Parser.parse(feed_url)
+  rescue StandardError => e
+    logger.error "RSS link error: #{e.message}"
   end
 
-  def atom_update(entries, channel)
-    entries.each do |item|
-      selected_item = channel.items.where(guid: item.id.content).first_or_initialize
-      selected_item.update(title: item.title.content, description: item.content.content, link: item.link.href, pub_date: item.updated.content.rfc2822)
+  # Getting entries from feed
+  def feed_select(feed)
+    selected_items = []
+    case feed.feed_type
+    when 'rss'
+      items = feed.channel.items
+      items.each do |item|
+        selected_items.push(rss_select(item))
+      end
+    when 'atom'
+      items = feed.entries
+      items.each do |item|
+        selected_items.push(atom_select(item))
+      end
     end
+    selected_items
+  end
+
+  def rss_select(item)
+    { guid: item.guid.content, title: item.title, description: item.description, link: item.link, pub_date: item.pubDate.rfc2822 }
+  end
+
+  def atom_select(item)
+    { guid: item.id.content, title: item.title.content, description: item.content.content, link: item.link.href, pub_date: item.updated.content.rfc2822 }
+  end
+
+  # Updating items table
+  def items_update(selected_items, channel)
+    selected_items.each do |item|
+      next if item[:guid].nil?
+
+      updated_item = channel.items.where(guid: item[:guid]).first_or_initialize
+      updated_item.update(title: item[:title], description: item[:description], link: item[:link], pub_date: item[:pub_date])
+    end
+  rescue StandardError => e
+    logger.error "Update error: #{e.message}"
   end
 end
