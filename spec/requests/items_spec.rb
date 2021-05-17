@@ -2,7 +2,6 @@ require 'rails_helper'
 
 RSpec.describe "Items", type: :request do
   before(:each) do
-    FactoryBot.create(:channel)
     FactoryBot.create(:item)
   end
 

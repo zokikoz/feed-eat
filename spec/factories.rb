@@ -5,6 +5,7 @@ FactoryBot.define do
   end
 
   factory :item do
+    before(:create) { FactoryBot.create(:channel) }
     id { 1 }
     channel_id { 1 }
     guid { 'https://www.ruby-lang.org/en/news/2021/04/05/ruby-3-0-1-released/' }

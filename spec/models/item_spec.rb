@@ -1,9 +1,10 @@
 require 'rails_helper'
 
 RSpec.describe Item, type: :model do
-  it "is not valid without a guid" do
-    subject { described_class.new(guid: nil) }
-    expect(subject).to_not be_valid
+  describe "Constraints" do
+    it "is not valid with null guid" do
+      expect { FactoryBot.create(:item, guid: nil) }.to raise_error(ActiveRecord::NotNullViolation)
+    end
   end
 
   describe "Associations" do

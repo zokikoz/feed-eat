@@ -1,11 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe Channel, type: :model do
-  it "is not valid without a link" do
-    subject { described_class.new(link: nil) }
-    expect(subject).to_not be_valid
-  end
-
   describe "Associations" do
     it { should have_many(:items) }
   end
@@ -20,7 +15,7 @@ RSpec.describe Channel, type: :model do
   end
 
   # Checking validator with shoulda matchers
-  describe "HTML link" do
+  describe "RSS feed" do
     it { should_not allow_value("http://www.example.com").for(:link) }
   end
 
