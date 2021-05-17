@@ -3,7 +3,7 @@ class RssWorker
 
   def perform
     Channel.all.each do |channel|
-      puts "Updating #{channel.link}"
+      Rails.logger.info "Updating #{channel.link}"
       URI.parse(channel.link).open do |rss|
         feed = RSS::Parser.parse(rss)
         # Content based parser
