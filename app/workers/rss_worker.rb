@@ -40,13 +40,16 @@ class RssWorker
 
   def rss_select(item)
     { guid: item.guid.content, title: item.title, description: item.description, link: item.link, pub_date: item.pubDate.rfc2822 }
-  rescue StandardError => e
-    logger.error "Selecting error: #{e.message}"
+  rescue NoMethodError
+    logger.error "Item field is missing"
     { guid: nil }
   end
 
   def atom_select(item)
     { guid: item.id.content, title: item.title.content, description: item.content.content, link: item.link.href, pub_date: item.updated.content.rfc2822 }
+  rescue NoMethodError
+    logger.error "Item field is missing"
+    { guid: nil }
   end
 
   # Updating items table
