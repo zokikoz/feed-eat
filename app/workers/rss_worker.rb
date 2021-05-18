@@ -40,6 +40,9 @@ class RssWorker
 
   def rss_select(item)
     { guid: item.guid.content, title: item.title, description: item.description, link: item.link, pub_date: item.pubDate.rfc2822 }
+  rescue StandardError => e
+    logger.error "Selecting error: #{e.message}"
+    { guid: nil }
   end
 
   def atom_select(item)
@@ -49,7 +52,7 @@ class RssWorker
   # Updating items table
   def items_update(selected_items, channel)
     selected_items.each do |item|
-      next if item[:guid].nil?
+      next if item[:guid].blank?
 
       updated_item = channel.items.where(guid: item[:guid]).first_or_initialize
       updated_item.update(title: item[:title], description: item[:description], link: item[:link], pub_date: item[:pub_date])
