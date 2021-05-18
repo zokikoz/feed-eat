@@ -11,10 +11,11 @@
 /log/*
 /tmp/*
 !/log/.keep
-!/tmp/.keep
 !/tmp/rss_response.txt
 !/tmp/atom_response.txt
 !/tmp/html_response.txt
+!/tmp/wrong_rss_response.txt
+!/tmp/wrong_atom_response.txt
 
 # Ignore pidfiles, but keep the directory.
 /tmp/pids/*

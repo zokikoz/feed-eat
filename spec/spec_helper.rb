@@ -19,9 +19,17 @@ RSpec.configure do |config|
     rss_response_file = File.new("#{::Rails.root}/tmp/rss_response.txt")
     stub_request(:get, "https://www.ruby-lang.org/en/feeds/news.rss")
       .to_return(status: 200, body: rss_response_file, headers: {})
+    # RSS invalid response stub
+    rss_response_file = File.new("#{::Rails.root}/tmp/wrong_rss_response.txt")
+    stub_request(:get, "https://www.ruby-lang.org/en/feeds/wrong.rss")
+      .to_return(status: 200, body: rss_response_file, headers: {})
     # ATOM valid response stub
     atom_response_file = File.new("#{::Rails.root}/tmp/atom_response.txt")
     stub_request(:get, "https://weblog.rubyonrails.org/feed/atom.xml")
+      .to_return(status: 200, body: atom_response_file, headers: {})
+    # ATOM invalid response stub
+    atom_response_file = File.new("#{::Rails.root}/tmp/wrong_atom_response.txt")
+    stub_request(:get, "https://weblog.rubyonrails.org/feed/wrong.xml")
       .to_return(status: 200, body: atom_response_file, headers: {})
     # HTML valid response stub
     html_response_file = File.new("#{::Rails.root}/tmp/html_response.txt")
