@@ -39,23 +39,25 @@ class RssWorker
   end
 
   def rss_select(item)
-    { guid: item.guid.content, title: item.title, description: item.description, link: item.link, pub_date: item.pubDate.rfc2822 }
-  rescue NoMethodError
-    logger.error "Item field is missing"
-    { guid: nil }
+    { guid: item.try(:guid).try(:content),
+      title: item.title,
+      description: item.description,
+      link: item.link,
+      pub_date: item.pubDate }
   end
 
   def atom_select(item)
-    { guid: item.id.content, title: item.title.content, description: item.content.content, link: item.link.href, pub_date: item.updated.content.rfc2822 }
-  rescue NoMethodError
-    logger.error "Item field is missing"
-    { guid: nil }
+    { guid: item.try(:id).try(:content),
+      title: item.try(:title).try(:content),
+      description: item.try(:content).try(:content),
+      link: item.try(:link).try(:href),
+      pub_date: item.try(:updated).try(:content) }
   end
 
   # Updating items table
   def items_update(selected_items, channel)
     selected_items.each do |item|
-      next if item[:guid].blank?
+      next if item[:guid].blank? || item[:pub_date].blank? 
 
       updated_item = channel.items.where(guid: item[:guid]).first_or_initialize
       updated_item.update(title: item[:title], description: item[:description], link: item[:link], pub_date: item[:pub_date])

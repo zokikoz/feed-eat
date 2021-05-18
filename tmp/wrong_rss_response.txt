@@ -135,7 +135,7 @@ It is recommended that all Ruby users update RDoc to the latest version that fix
 
 &lt;p&gt;Posted by mame on 5 Apr 2021&lt;/p&gt;</description>
       <pubDate>Mon, 05 Apr 2021 12:00:00 +0000</pubDate>
-      <guid>https://www.ruby-lang.org/en/news/2021/04/05/tempfile-path-traversal-on-windows-cve-2021-28966/</guid>
+      <guid></guid>
       <link>https://www.ruby-lang.org/en/news/2021/04/05/tempfile-path-traversal-on-windows-cve-2021-28966/</link>
     </item>
     
