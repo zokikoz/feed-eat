@@ -43,7 +43,7 @@ class RssWorker
 
   # RSS items parser
   def rss_select(item)
-    { guid: item.try(:guid).try(:content),
+    { guid: item.try_chain(:guid, :content),
       title: item.title,
       description: item.description,
       link: item.link,
@@ -52,11 +52,11 @@ class RssWorker
 
   # Atom entries parser
   def atom_select(item)
-    { guid: item.try(:id).try(:content),
-      title: item.try(:title).try(:content),
-      description: item.try(:content).try(:content),
-      link: item.try(:link).try(:href),
-      pub_date: item.try(:updated).try(:content) }
+    { guid: item.try_chain(:id, :content),
+      title: item.try_chain(:title, :content),
+      description: item.try_chain(:content, :content),
+      link: item.try_chain(:link, :href),
+      pub_date: item.try_chain(:updated, :content) }
   end
 
   # Updating items table
