@@ -5,6 +5,11 @@ require 'webmock/rspec'
 Sidekiq::Testing.inline!
 
 RSpec.describe RssWorker, type: :worker do
+  before(:each) do
+    # Stub callback method
+    allow_any_instance_of(Channel).to receive(:rss_worker_start).and_return(true)
+  end
+
   describe "Valid RSS feed" do
     before { FactoryBot.create(:channel) }
     it "is load all RSS entries to items table" do

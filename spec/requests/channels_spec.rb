@@ -23,6 +23,11 @@ RSpec.describe "/channels", type: :request do
     {link: 'news.rss'}
   }
 
+  before(:each) do
+    # Stub callback method
+    allow_any_instance_of(Channel).to receive(:rss_worker_start).and_return(true)
+  end
+
   describe "GET /index" do
     it "renders a successful response" do
       Channel.create! valid_attributes
