@@ -42,4 +42,12 @@ RSpec.describe Channel, type: :model do
       expect(subject).to be_valid
     end
   end
+
+  describe "Callbacks" do
+    it "should start RSS worker after create" do
+      channel = FactoryBot.build(:channel)
+      expect(channel).to receive(:rss_worker_start)
+      channel.run_callbacks(:create)
+    end
+  end
 end
