@@ -78,7 +78,5 @@ class RssWorker
     return if pub_date.blank?
 
     pub_date.to_datetime
-  rescue Date::Error
-    nil
   end
 end
