@@ -15,13 +15,9 @@ require 'rails_helper'
 RSpec.describe "/channels", type: :request do
   # Channel. As you add validations to Channel, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) {
-    { link: 'https://www.ruby-lang.org/en/feeds/news.rss' }
-  }
+  let(:valid_attributes) { { link: 'https://www.ruby-lang.org/en/feeds/news.rss' } }
 
-  let(:invalid_attributes) {
-    {link: 'news.rss'}
-  }
+  let(:invalid_attributes) { { link: 'news.rss' } }
 
   before(:each) do
     # Stub callback method
@@ -46,17 +42,15 @@ RSpec.describe "/channels", type: :request do
   describe "POST /create" do
     context "with valid parameters" do
       it "creates a new Channel" do
-        expect {
-          post channels_url, params: { channel: valid_attributes }
-        }.to change(Channel, :count).by(1)
+        expect { post channels_url, params: { channel: valid_attributes } }
+          .to change(Channel, :count).by(1)
       end
     end
 
     context "with invalid parameters" do
       it "does not create a new Channel" do
-        expect {
-          post channels_url, params: { channel: invalid_attributes }
-        }.to change(Channel, :count).by(0)
+        expect { post channels_url, params: { channel: invalid_attributes } }
+          .to change(Channel, :count).by(0)
       end
     end
   end
@@ -64,9 +58,8 @@ RSpec.describe "/channels", type: :request do
   describe "DELETE /destroy" do
     it "destroys the requested channel" do
       channel = Channel.create! valid_attributes
-      expect {
-        delete channel_url(channel)
-      }.to change(Channel, :count).by(-1)
+      expect { delete channel_url(channel) }
+        .to change(Channel, :count).by(-1)
     end
 
     it "redirects to the channels list" do

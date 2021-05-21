@@ -12,4 +12,4 @@ Metrics/MethodLength:
 Metrics/ModuleLength:
   Max: 200
 Metrics/BlockLength:
-  IgnoredMethods: ['describe', 'context']
+  IgnoredMethods: ['describe', 'context', 'configure']
