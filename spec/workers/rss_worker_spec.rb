@@ -10,6 +10,14 @@ RSpec.describe RssWorker, type: :worker do
     allow_any_instance_of(Channel).to receive(:rss_worker_start).and_return(true)
   end
 
+  describe "Invalid feed" do
+    before { FactoryBot.build(:channel, link: 'http://www.example.com').save(validate: false) }
+    it "is not connected and log error" do
+      expect(Sidekiq.logger).to receive(:error).with(/Feed connection error/)
+      RssWorker.perform_async
+    end
+  end
+
   describe "Valid RSS feed" do
     before { FactoryBot.create(:channel) }
     it "is load all RSS entries to items table" do
