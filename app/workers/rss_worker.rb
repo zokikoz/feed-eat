@@ -22,7 +22,7 @@ class RssWorker
     feed_url = URI.parse(link)
     RSS::Parser.parse(feed_url)
   rescue StandardError => e
-    logger.error "Feed connection error: #{e.message}"
+    logger.error "Feed parsing error: #{e.message}"
     nil
   end
 
