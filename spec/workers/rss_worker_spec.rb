@@ -18,6 +18,14 @@ RSpec.describe RssWorker, type: :worker do
     end
   end
 
+  describe "Invalid updating content" do
+    it "is log error" do
+      expect(Sidekiq.logger).to receive(:error).with(/Update error/)
+      worker = RssWorker.new
+      worker.send(:item_update, nil, nil)
+    end
+  end
+
   describe "Valid RSS feed content" do
     before { FactoryBot.create(:channel) }
     it "is load all RSS entries to items table" do
